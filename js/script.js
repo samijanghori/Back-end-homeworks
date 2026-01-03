@@ -28,3 +28,19 @@ function checkNumber(myNumber)
 checkNumber(3);
 checkNumber(7);
 checkNumber(42);
+
+
+//===================== next Exercise from loops ================
+// ================= Exercise ======================
+//In this exercise, you must write a for loop that iterates on the myArray variable and prints out all of its members.
+// expected out put : 
+//          What is the meaning of life?
+//          The meaning of life is
+//          42
+var myArray = ["What is the meaning of life?", "The meaning of life is", 42];
+
+// TODO: modify this code
+for (var i = 0 ; i<myArray.length ; i++)
+{
+    console.log(myArray[i]);
+}
