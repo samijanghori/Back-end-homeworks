@@ -65,3 +65,19 @@ console.log(person.firstName)
 console.log(person.lastName)
 console.log(person.age)
 console.log(person.employed)
+
+
+
+
+
+
+
+//===================== next Exercise ================
+// ================= Functions in js ======================
+// Exercise
+// Define a function called multiplyFive which accepts a number and returns that number multiplied by 5.
+var multiplyFive = function(number)
+{
+    return number * 5;
+}
+console.log(multiplyFive(2));
