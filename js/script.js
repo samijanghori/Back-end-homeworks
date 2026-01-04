@@ -90,3 +90,24 @@ console.log(multiplyFive(2));
 // Make a variable test set it equal to a prompt box, and type "Hi!" in it (without the quotes) when it pops up. Note: your pop-up blocker must not be enabled.
 var test = prompt("Type Hi!");
 console.log(test);
+
+
+
+
+//=========================next Exercise ==============
+// ======================== Callback function in js =============
+//Exercise
+//Define a function called callback which receives an argument and prints it out.
+function useCallback(callback) {
+    callback(1);
+    callback(2);
+    callback(3);
+}
+
+function callback(sentence) {
+    // print out sentence
+    console.log(sentence);
+}
+
+// execute useCallback with the callback as the argument
+useCallback(callback);
