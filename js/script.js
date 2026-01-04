@@ -111,3 +111,16 @@ function callback(sentence) {
 
 // execute useCallback with the callback as the argument
 useCallback(callback);
+
+
+
+
+
+
+
+//=========================next Exercise ==============
+// ======================== Arrow function in js =============
+//Exercise
+// Define an arrow function divideByTwo which accepts a number and returns that number divided by 2.
+let divideByTwo = (number) => {return number / 2};
+console.log(divideByTwo(4));
