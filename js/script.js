@@ -124,3 +124,25 @@ useCallback(callback);
 // Define an arrow function divideByTwo which accepts a number and returns that number divided by 2.
 let divideByTwo = (number) => {return number / 2};
 console.log(divideByTwo(4));
+
+
+
+
+//=======================next Exercise ================
+// About call back methods and promises....
+// Exercise
+// Answer the questionS?
+/* 1. Explain the call back method fully in js?
+ Answer : the call back method is to give a function as an argument
+to other function .
+2. give an example of call back method in js
+*/ 
+//Answer 
+function mycallback(){
+    console.log("i am call back");
+}
+function mainfunction(cb){
+    console.log("hello ");
+    cb();
+}
+mainfunction(callback);
