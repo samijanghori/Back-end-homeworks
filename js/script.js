@@ -146,3 +146,32 @@ function mainfunction(cb){
     cb();
 }
 mainfunction(callback);
+
+/*
+3. what is Asynchronous programming in javaScript?
+Answer : method of programming which enables different parts of code to run at changing time, instead of immediately
+let's see how the problem is
+*/
+// the problem that is used using promise
+function printMyName(){
+    setTimeout(() => {
+        return 'hi';
+    },2000)
+    return 'sammi';
+}
+function sayMyName(){
+    console.log(printMyName());
+}
+// it will print out the sammi first and then after 2 seconds will return hi so we don't want this
+// to solve it use promise , async and await
+function sprintMyName(){
+    return new Promise(function(resolve){
+        setTimeout(() => {
+        resolve('sami');
+    },2000)
+    });
+}
+async function ssayMyName(){
+    console.log(await sprintMyName());
+}
+// now the sami will print after 2 seconds
