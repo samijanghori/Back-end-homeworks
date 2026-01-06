@@ -204,3 +204,33 @@ upperCaseAsync(null).catch((x) => {
     console.log("No string received!");
 });
 
+
+
+
+
+
+
+
+//=======================Next Exercise =====================
+//=================sleep function===========================
+// an example of sleep function
+
+//defining sleep method
+function sleep(ms){
+    return new Promise(resolve => setTimeout(resolve,ms));
+}
+
+
+//using sleep method
+async function counting(){
+    console.log("the couning begin");
+
+    for( let i = 5; i > 0 ; i--){
+        console.log(`${i}...`);
+        await sleep(1000);
+    }
+    console.log('happy new year!');
+
+}
+counting();
+
