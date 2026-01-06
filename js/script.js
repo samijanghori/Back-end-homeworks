@@ -234,3 +234,17 @@ async function counting(){
 }
 counting();
 
+
+
+//next Example from code to learn website
+// Exercise
+// Write an async function which waits 500 milliseconds and then returns the uppercase of a given string. Use the sleep function provided.
+//-----------------first define sleep function
+function sleep(ms){
+    return new Promise((resolve) => setTimeout(resolve,ms) );
+}
+async function strtoupper(st){
+    await sleep(500);
+    return st.toUpperCase();
+}
+strtoupper("sami").then(console.log);
