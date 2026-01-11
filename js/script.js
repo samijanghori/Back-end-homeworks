@@ -248,3 +248,28 @@ async function strtoupper(st){
     return st.toUpperCase();
 }
 strtoupper("sami").then(console.log);
+
+
+
+//==================================next Exercise ===============
+//==============OOP js ===========================
+//Exercise
+//Create a class called Person which accepts the name of a person as a string, and his/her age as a number.
+//The Person class should have a method called describe which returns a string with the following syntax: "name, age years old". So for example, if John is 19 years old then the function describe of his object will return "John, 19 years old".
+class Person{
+   
+constructor(personname , age){
+    this.personname = personname;
+    this.age = age;
+}
+     describe()
+    {
+        console.log(this.personname +", " + this.age +" " + "years old");
+    }
+
+
+}
+var jack = new Person("Jack",25);
+var jill = new Person("Jill",24);
+jack.describe();
+jill.describe();
