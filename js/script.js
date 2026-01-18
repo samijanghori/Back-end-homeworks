@@ -301,10 +301,107 @@ mySecondFunction.call(myobject,2,3);
 // here is a difference between call and apply
 mySecondFunction.apply(myobject,[2,3]);
 
-// here is difference between call - apply vs bind
 
+// here is difference between call - apply vs bind
 let sumnum = mySecondFunction.bind(myobject);
 sumnum(2,3);
 
 
-     
+
+//Exercise
+//Create bound copies of printFullName and printDetails to person called boundPrintFullName and boundPrintDetails.
+
+var person = {
+    firstName : "John",
+    lastName : "Smith",
+    age : 23
+};
+
+function printFullName()
+{
+    console.log(this.firstName + " " + this.lastName);
+}
+
+function printDetails()
+{
+    console.log(this.firstName + " is " + this.age + " years old");
+}
+
+// TODO: create bound copies of printFullName and printDetails.
+var boundPrintFullName = printFullName.bind(person);
+var boundPrintDetails = printDetails.bind(person);
+
+boundPrintFullName();
+boundPrintDetails();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//======================== inheritence in javascript===================
+//=====================================================================
+//2 types -> 1. prototype based             2. class based
+//1. prototype based example exercise is below:
+
+function Animal(name){
+    this.name = name;
+}
+Animal.prototype.sayHello = function(){
+    console.log("Hello I am " + this.name);
+}
+function Dog(name , breed){
+    //به ارث بردن پراپرتی 
+Animal.call(this,name);
+this.breed = breed;
+}
+
+// inhereting the methods
+Dog.prototype = Object.create(Animal.prototype);
+Dog.prototype.constructor = Dog;
+
+const dog1 = new Dog("Max", "Labrador");
+dog1.sayHello;
+
+
+
+
+
+//inheritence using class ES6
+class Animal{
+    constructor(name){
+        this.name = name;
+
+    }
+    speak(){
+        console.log("hello I am  " + this.name);
+    }
+}
+class Dog extends Animal{
+    constructor(name,breed){
+        super(name);
+        this.breed = breed;
+    }
+    break(){
+        console.log("woof!");
+    }
+}
+const dog = new Dog("buddy" , "husky");
+dog.speak();
+dog.break();
+
+ 
+
