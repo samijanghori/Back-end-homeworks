@@ -162,19 +162,19 @@
 // function sayMyName(){
 //     console.log(printMyName());
 // }
-// // it will print out the sammi first and then after 2 seconds will return hi so we don't want this
-// // to solve it use promise , async and await
-// function sprintMyName(){
-//     return new Promise(function(resolve){
-//         setTimeout(() => {
-//         resolve('sami');
-//     },2000)
-//     });
-// }
-// async function ssayMyName(){
-//     console.log(await sprintMyName());
-// }
-// // now the sami will print after 2 seconds
+// // // it will print out the sammi first and then after 2 seconds will return hi so we don't want this
+// // // to solve it use promise , async and await
+// // function sprintMyName(){
+// //     return new Promise(function(resolve){
+// //         setTimeout(() => {
+// //         resolve('sami');
+// //     },2000)
+// //     });
+// // }
+// // async function ssayMyName(){
+// //     console.log(await sprintMyName());
+// // }
+// // // now the sami will print after 2 seconds
 
 
 
@@ -186,222 +186,232 @@
 
 
 
-// //Exercise
-// //Write a function which receives a string, and returns a Promise.
-// //The promise should resolve with the uppercase version of the string, but should reject if the string is null.
-// function upperCaseAsync(s) {
-//     return new Promise((resolve, reject) => {
-//         if (s === null) {
-//             reject();
-//         } else {
-//             resolve(s.toUpperCase());
-//         }
-//     });
-// }
+// // //Exercise
+// // //Write a function which receives a string, and returns a Promise.
+// // //The promise should resolve with the uppercase version of the string, but should reject if the string is null.
+// // function upperCaseAsync(s) {
+// //     return new Promise((resolve, reject) => {
+// //         if (s === null) {
+// //             reject();
+// //         } else {
+// //             resolve(s.toUpperCase());
+// //         }
+// //     });
+// // }
 
-// upperCaseAsync("steve").then(console.log);
-// upperCaseAsync(null).catch((x) => {
-//     console.log("No string received!");
-// });
-
-
+// // upperCaseAsync("steve").then(console.log);
+// // upperCaseAsync(null).catch((x) => {
+// //     console.log("No string received!");
+// // });
 
 
 
 
 
 
-// //=======================Next Exercise =====================
-// //=================sleep function===========================
-// // an example of sleep function
-
-// //defining sleep method
-// function sleep(ms){
-//     return new Promise(resolve => setTimeout(resolve,ms));
-// }
 
 
-// //using sleep method
-// async function counting(){
-//     console.log("the couning begin");
+// // //=======================Next Exercise =====================
+// // //=================sleep function===========================
+// // // an example of sleep function
 
-//     for( let i = 5; i > 0 ; i--){
-//         console.log(`${i}...`);
-//         await sleep(1000);
-//     }
-//     console.log('happy new year!');
-
-// }
-// counting();
+// // //defining sleep method
+// // function sleep(ms){
+// //     return new Promise(resolve => setTimeout(resolve,ms));
+// // }
 
 
+// // //using sleep method
+// // async function counting(){
+// //     console.log("the couning begin");
 
-// //next Example from code to learn website
-// // Exercise
-// // Write an async function which waits 500 milliseconds and then returns the uppercase of a given string. Use the sleep function provided.
-// //-----------------first define sleep function
-// function sleep(ms){
-//     return new Promise((resolve) => setTimeout(resolve,ms) );
-// }
-// async function strtoupper(st){
-//     await sleep(500);
-//     return st.toUpperCase();
-// }
-// strtoupper("sami").then(console.log);
+// //     for( let i = 5; i > 0 ; i--){
+// //         console.log(`${i}...`);
+// //         await sleep(1000);
+// //     }
+// //     console.log('happy new year!');
+
+// // }
+// // counting();
 
 
 
-// //==================================next Exercise ===============
-// //==============OOP js ===========================
-// //Exercise
-// //Create a class called Person which accepts the name of a person as a string, and his/her age as a number.
-// //The Person class should have a method called describe which returns a string with the following syntax: "name, age years old". So for example, if John is 19 years old then the function describe of his object will return "John, 19 years old".
-// class Person{
+// // //next Example from code to learn website
+// // // Exercise
+// // // Write an async function which waits 500 milliseconds and then returns the uppercase of a given string. Use the sleep function provided.
+// // //-----------------first define sleep function
+// // function sleep(ms){
+// //     return new Promise((resolve) => setTimeout(resolve,ms) );
+// // }
+// // async function strtoupper(st){
+// //     await sleep(500);
+// //     return st.toUpperCase();
+// // }
+// // strtoupper("sami").then(console.log);
+
+
+
+// // //==================================next Exercise ===============
+// // //==============OOP js ===========================
+// // //Exercise
+// // //Create a class called Person which accepts the name of a person as a string, and his/her age as a number.
+// // //The Person class should have a method called describe which returns a string with the following syntax: "name, age years old". So for example, if John is 19 years old then the function describe of his object will return "John, 19 years old".
+// // class Person{
    
-// constructor(personname , age){
-//     this.personname = personname;
-//     this.age = age;
+// // constructor(personname , age){
+// //     this.personname = personname;
+// //     this.age = age;
+// // }
+// //      describe()
+// //     {
+// //         console.log(this.personname +", " + this.age +" " + "years old");
+// //     }
+
+
+// // }
+// // var jack = new Person("Jack",25);
+// // var jill = new Person("Jill",24);
+// // jack.describe();
+// // jill.describe();
+
+
+
+
+
+
+
+
+
+
+
+
+// //=========================Next Exercise==================
+// //==================== function context ==================
+// // apply , bind , call , this keyword
+
+
+// const myobject = {x:10};
+
+// function mySecondFunction(param1 , param2){
+//     console.log(this.x + param1 + param2);
 // }
-//      describe()
-//     {
-//         console.log(this.personname +", " + this.age +" " + "years old");
+// mySecondFunction.call(myobject,2,3);
+
+
+// // here is a difference between call and apply
+// mySecondFunction.apply(myobject,[2,3]);
+
+
+// // here is difference between call - apply vs bind
+// let sumnum = mySecondFunction.bind(myobject);
+// sumnum(2,3);
+
+
+
+// //Exercise
+// //Create bound copies of printFullName and printDetails to person called boundPrintFullName and boundPrintDetails.
+
+// var person = {
+//     firstName : "John",
+//     lastName : "Smith",
+//     age : 23
+// };
+
+// function printFullName()
+// {
+//     console.log(this.firstName + " " + this.lastName);
+// }
+
+// function printDetails()
+// {
+//     console.log(this.firstName + " is " + this.age + " years old");
+// }
+
+// // TODO: create bound copies of printFullName and printDetails.
+// var boundPrintFullName = printFullName.bind(person);
+// var boundPrintDetails = printDetails.bind(person);
+
+// boundPrintFullName();
+// boundPrintDetails();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// //======================== inheritence in javascript===================
+// //=====================================================================
+// //2 types -> 1. prototype based             2. class based
+// //1. prototype based example exercise is below:
+
+// function Animal(name){
+//     this.name = name;
+// }
+// Animal.prototype.sayHello = function(){
+//     console.log("Hello I am " + this.name);
+// }
+// function Dog(name , breed){
+//     //به ارث بردن پراپرتی 
+// Animal.call(this,name);
+// this.breed = breed;
+// }
+
+// // inhereting the methods
+// Dog.prototype = Object.create(Animal.prototype);
+// Dog.prototype.constructor = Dog;
+
+// const dog1 = new Dog("Max", "Labrador");
+// dog1.sayHello;
+
+
+
+
+
+// //inheritence using class ES6
+// class Animal{
+//     constructor(name){
+//         this.name = name;
+
 //     }
-
-
+//     speak(){
+//         console.log("hello I am  " + this.name);
+//     }
 // }
-// var jack = new Person("Jack",25);
-// var jill = new Person("Jill",24);
-// jack.describe();
-// jill.describe();
+// class Dog extends Animal{
+//     constructor(name,breed){
+//         super(name);
+//         this.breed = breed;
+//     }
+//     break(){
+//         console.log("woof!");
+//     }
+// }
+// const dog = new Dog("buddy" , "husky");
+// dog.speak();
+// dog.break();
 
 
 
 
-
-
-
-
-
-
-
-
-//=========================Next Exercise==================
-//==================== function context ==================
-// apply , bind , call , this keyword
-
-
-const myobject = {x:10};
-
-function mySecondFunction(param1 , param2){
-    console.log(this.x + param1 + param2);
-}
-mySecondFunction.call(myobject,2,3);
-
-
-// here is a difference between call and apply
-mySecondFunction.apply(myobject,[2,3]);
-
-
-// here is difference between call - apply vs bind
-let sumnum = mySecondFunction.bind(myobject);
-sumnum(2,3);
-
-
-
-//Exercise
-//Create bound copies of printFullName and printDetails to person called boundPrintFullName and boundPrintDetails.
-
-var person = {
-    firstName : "John",
-    lastName : "Smith",
-    age : 23
-};
-
-function printFullName()
+//====================== function paramaters small game============
+//user see 3 clicks on the web page when click on each of them will win a different prize
+function showcurtain(prize)
 {
-    console.log(this.firstName + " " + this.lastName);
+    alert("You won :" + prize);
 }
-
-function printDetails()
-{
-    console.log(this.firstName + " is " + this.age + " years old");
-}
-
-// TODO: create bound copies of printFullName and printDetails.
-var boundPrintFullName = printFullName.bind(person);
-var boundPrintDetails = printDetails.bind(person);
-
-boundPrintFullName();
-boundPrintDetails();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//======================== inheritence in javascript===================
-//=====================================================================
-//2 types -> 1. prototype based             2. class based
-//1. prototype based example exercise is below:
-
-function Animal(name){
-    this.name = name;
-}
-Animal.prototype.sayHello = function(){
-    console.log("Hello I am " + this.name);
-}
-function Dog(name , breed){
-    //به ارث بردن پراپرتی 
-Animal.call(this,name);
-this.breed = breed;
-}
-
-// inhereting the methods
-Dog.prototype = Object.create(Animal.prototype);
-Dog.prototype.constructor = Dog;
-
-const dog1 = new Dog("Max", "Labrador");
-dog1.sayHello;
-
-
-
-
-
-//inheritence using class ES6
-class Animal{
-    constructor(name){
-        this.name = name;
-
-    }
-    speak(){
-        console.log("hello I am  " + this.name);
-    }
-}
-class Dog extends Animal{
-    constructor(name,breed){
-        super(name);
-        this.breed = breed;
-    }
-    break(){
-        console.log("woof!");
-    }
-}
-const dog = new Dog("buddy" , "husky");
-dog.speak();
-dog.break();
 
  
 
