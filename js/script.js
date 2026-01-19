@@ -417,13 +417,25 @@ function showcurtain(prize)
 
 
 
-//============================ Destructuring in javascript
-//===========================================================
-// Basic example
-const student = {
-    name : "ali",
-    lastname : "mohammadi",
-    age : 14,
-};
-let {name,lastname} = student;
-console.log(name,lastname);
+// //============================ Destructuring in javascript
+// //===========================================================
+// // Basic example
+// const student = {
+//     name : "ali",
+//     lastname : "mohammadi",
+//     age : 14,
+// };
+// let {name,lastname} = student;
+// console.log(name,lastname);
+
+
+
+//Next example 
+//Default value for properties that don't exist in object
+const teachers = {
+    name : "sami",
+    lastname : "hamidi",
+    age : 25,
+}
+let {name,lastname,grade="A"} = teachers;
+console.log("the " + name +" " + lastname + " teacher is in grade : " + grade);
