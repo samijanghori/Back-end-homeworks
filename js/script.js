@@ -443,9 +443,19 @@ console.log("the " + name +" " + lastname + " teacher is in grade : " + grade);
 
 
 
-//Next example
-//Array destructuring
+// //Next example
+// //Array destructuring
 
-const myarray = ["apple","banana","orange"];
-let [a,b] = myarray;
-console.log(a,b);
+// const myarray = ["apple","banana","orange"];
+// let [a,b] = myarray;
+// console.log(a,b);
+
+
+
+
+
+//next example 
+//rest operator in arrays in javascript
+const scores = [67,89,100,90,100,98];
+let [a,b,...rest] =  scores;
+console.log(a,b,rest);
