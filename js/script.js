@@ -415,3 +415,15 @@ function showcurtain(prize)
 
  
 
+
+
+//============================ Destructuring in javascript
+//===========================================================
+// Basic example
+const student = {
+    name : "ali",
+    lastname : "mohammadi",
+    age : 14,
+};
+let {name,lastname} = student;
+console.log(name,lastname);
