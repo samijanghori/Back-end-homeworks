@@ -439,3 +439,13 @@ const teachers = {
 }
 let {name,lastname,grade="A"} = teachers;
 console.log("the " + name +" " + lastname + " teacher is in grade : " + grade);
+
+
+
+
+//Next example
+//Array destructuring
+
+const myarray = ["apple","banana","orange"];
+let [a,b] = myarray;
+console.log(a,b);
