@@ -459,3 +459,21 @@ console.log("the " + name +" " + lastname + " teacher is in grade : " + grade);
 const scores = [67,89,100,90,100,98];
 let [a,b,...rest] =  scores;
 console.log(a,b,rest);
+
+
+
+
+//==============================next exercise
+//====================== objects in js
+//Exercise
+// create an object and then write the code to output the keys and values of the object
+const myobject = {
+    name:"sami",
+    age: 21
+}
+var all_properties = Object.keys(myobject);
+for(var i = 0 ; i<all_properties.length; i++)
+{
+    console.log(all_properties[i] + ":");
+    console.log(myobject[all_properties[i]]);
+}
