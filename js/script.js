@@ -477,3 +477,38 @@ for(var i = 0 ; i<all_properties.length; i++)
     console.log(all_properties[i] + ":");
     console.log(myobject[all_properties[i]]);
 }
+
+
+
+//==============================next exercise
+//====================== objects in js
+//Exercise
+/*
+Assignment:
+Create an object named License.
+Define its properties using Object.defineProperty with the following conditions:
+
+Property name must be non-enumerable
+
+Property number must be non-configurable
+
+Finally, use property descriptors to display all attributes of the properties.
+*/
+var License = {}
+Object.defineProperties(License,{
+    Name : {
+        value : "myLiscence",
+        enumerable : false,
+        configurable : true,
+        writable : true
+    },
+    Number : {
+        value : 12,
+        configurable : false,
+        enumerable : true,
+        writable : true
+    }
+});
+
+console.log(Object.getOwnPropertyDescriptor(License,"Name"));
+console.log(Object.getOwnPropertyDescriptor(License,"Number"));
