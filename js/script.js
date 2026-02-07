@@ -512,3 +512,8 @@ Object.defineProperties(License,{
 
 console.log(Object.getOwnPropertyDescriptor(License,"Name"));
 console.log(Object.getOwnPropertyDescriptor(License,"Number"));
+
+
+//Exercise 
+// now seal the object properties
+Object.seal(License);
